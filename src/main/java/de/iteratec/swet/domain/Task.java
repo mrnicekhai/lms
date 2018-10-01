@@ -1,4 +1,4 @@
-package de.iteratec.swet;
+package de.iteratec.swet.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +16,7 @@ public class Task {
     @Id
     @GeneratedValue
     private Long id;
-    @Column
+    @Column(unique = true)
     private String name;
 
     public Long getId() {
